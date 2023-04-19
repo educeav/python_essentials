@@ -11,6 +11,15 @@ def es_anio_bisiesto(anio):
     else:
         return False
 
-anio = int(input("Ingrese un año "))
-print(es_anio_bisiesto(anio))
+#Código provisto
+testData = [1900, 2000, 2016, 1987]
+testResults = [False, True, True, False]
 
+for i in range(len(testData)):
+    yr = testData[i]
+    print(yr,"->",end="")
+    result = es_anio_bisiesto(yr) #cambia el nombre del método
+    if result == testResults[i]:
+        print("OK")
+    else:
+        print("Failed")
